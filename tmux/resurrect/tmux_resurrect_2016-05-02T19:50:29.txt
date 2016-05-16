@@ -1,0 +1,12 @@
+pane	working	1	:working	1	:*	1	:/home/nitin/Projects/reconstruction	0	vim	:vim un.cpp
+pane	working	1	:working	1	:*	2	:/home/nitin/Projects/reconstruction/test1	1	vim	:vim firstattempt1.cpp
+pane	working	2	:scripting	0	: 	1	:/home/nitin/bin	0	zsh	:
+pane	working	2	:scripting	0	: 	2	:/home/nitin	1	zsh	:
+pane	working	3	:apps	0	:-	1	:/home/nitin	0	zsh	:
+pane	working	3	:apps	0	:-	2	:/home/nitin	0	zsh	:
+pane	working	3	:apps	0	:-	3	:/home/nitin	0	zsh	:
+pane	working	3	:apps	0	:-	4	:/home/nitin/Projects	1	MATLAB	:/usr/local/MATLAB/R2015b/bin/glnxa64/MATLAB
+window	working	1	1	:*	21f7,313x91,0,0{156x91,0,0,2,156x91,157,0,0}
+window	working	2	0	: 	a1f7,313x91,0,0{156x91,0,0,1,156x91,157,0,3}
+window	working	3	0	:-	a050,313x91,0,0[313x45,0,0{156x45,0,0,4,156x45,157,0,7},313x45,0,46{156x45,0,46,5,156x45,157,46,6}]
+state	working	

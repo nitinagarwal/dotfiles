@@ -1,0 +1,18 @@
+pane	start	1	:working session	0	: 	1	:/home/nitin/Projects/reconstruction	0	zsh	:
+pane	start	1	:working session	0	: 	2	:/home/nitin/Projects/reconstruction	0	zsh	:
+pane	start	1	:working session	0	: 	3	:/home/nitin/Projects/reconstruction	1	zsh	:
+pane	start	2	:downloads	0	: 	1	:/home/nitin/Downloads	1	zsh	:
+pane	start	3	:scripting	0	: 	1	:/home/nitin/bin	1	zsh	:
+pane	start	4	:softwares	0	:-	1	:/home/nitin	0	zsh	:
+pane	start	4	:softwares	0	:-	2	:/home/nitin	0	zsh	:
+pane	start	4	:softwares	0	:-	3	:/home/nitin/Projects	0	MATLAB	:/usr/local/MATLAB/R2015b/bin/glnxa64/MATLAB
+pane	start	4	:softwares	0	:-	4	:/home/nitin	1	zsh	:
+pane	start	4	:softwares	0	:-	5	:/home/nitin	0	bash	:/bin/bash /usr/bin/sublime-text
+pane	start	5	:vim&tmux	1	:*	1	:/home/nitin	0	zsh	:
+pane	start	5	:vim&tmux	1	:*	2	:/home/nitin	1	vim	:vim ./.tmux.conf
+window	start	1	0	: 	e10b,313x91,0,0{156x91,0,0[156x45,0,0,0,156x45,0,46,9],156x91,157,0,8}
+window	start	2	0	: 	ba7f,313x91,0,0,2
+window	start	3	0	: 	ba80,313x91,0,0,3
+window	start	4	0	:-	709a,313x91,0,0{156x91,0,0,4,156x91,157,0[156x22,157,0,5,156x22,157,23,7,156x22,157,46,6,156x22,157,69,12]}
+window	start	5	1	:*	ce90,313x91,0,0{156x91,0,0,10,156x91,157,0,11}
+state	start	

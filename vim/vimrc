@@ -1,0 +1,406 @@
+" Vim config file
+" Nitin Agarwal
+" last updated 25th April 16
+
+":echo $MYVIMRC this is the location of my vimrc from vim
+":set name-of-expression? for looking at curret state
+
+
+
+"----------------------------Plugins Management---------------------
+
+"disable vi compatibility (emulation of old bugs)
+set nocompatible
+
+"vundle requirements
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()				"REQUIRED
+
+"All plugins go here btw two REQUIRED (specify plugins - 'user/repository')
+
+Plugin 'gmarik/vundle'			"REQUIRED
+
+"Syntastic
+Plugin 'scrooloose/syntastic.git'
+
+"Nerd Tree
+Plugin 'scrooloose/nerdtree'
+
+"Commentary-Motion aware
+Plugin 'tpope/vim-commentary'
+
+"Solarized Color Scheme
+Plugin 'altercation/vim-colors-solarized'
+
+"Surround-Add,Change,Remove enclosing remakrs
+Plugin 'tpope/vim-surround'
+
+"Enable repeating of supporting commands from plugins
+Plugin 'tpope/vim-repeat'
+
+"Enables syntax highlighting for .tmux.config
+Plugin 'tmux-plugins/vim-tmux'
+
+"Syntax completion for C family languages
+Plugin 'Valloric/YouCompleteMe'
+
+"Auto completion of delimiters
+Plugin 'Raimondi/delimitMate'
+
+"Allows to use 'tabs' for completion
+Plugin 'ervandew/supertab'
+
+"Snippets for different languages
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
+" Plugin 'garbas/vim-snipmate' 
+Bundle 'SirVer/ultisnips'
+
+"Seamless movement between vim and tmux splits
+Plugin 'christoomey/vim-tmux-navigator'
+
+"Some text-objects (nouns) on which various other verbs can act
+Plugin 'kana/vim-textobj-entire' 
+Plugin 'kana/vim-textobj-indent'  
+Plugin 'kana/vim-textobj-line'     
+Plugin 'kana/vim-textobj-user'      
+
+" Switching between .h & .cpp file faster
+Plugin 'vim-scripts/a.vim'
+
+" copy and pasting fast
+Plugin 'vim-scripts/ReplaceWithRegister'
+
+"Now we can turn our filetype functionality back on
+filetype plugin indent on 		"REQUIRED
+
+"-----------------------------General-------------------------------------
+
+"Integrates copy & paste with system clipboard
+"works only after installing vim-gnome
+set clipboard=unnamedplus
+
+"In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" Sets how many lines of history VIM has to remember
+set history=1000
+
+"leader is comma (default \)
+let mapleader=","    
+
+"save session
+nnoremap <leader>s :mksession<CR>   
+
+"open myvimrc in new split for quick editing Mnem: 'edit vim'
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+
+"reload my vim from source my vim after editing Mnem: 'source vim'
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+
+"edit zshell in separate split
+:nnoremap <leader>ez :vsplit ~/.zshrc<cr>
+
+"keeps the formating same when you are pasting from different window in vim
+" set paste
+
+"removes the swap files
+set noswapfile
+
+"Change buffer without saving
+set hidden
+
+"Vim will ask what to do when closing a modified buffer
+set confirm
+
+"No error bells
+set noerrorbells
+set visualbell
+
+"Return to last edit position when opening files
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+" Remember info about open buffers on close
+set viminfo^=%
+
+if has("vms")
+  set nobackup          "do not keep a backup file, use versions instead
+else
+  set backup            "keep a backup file
+  set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  set backupskip=/tmp/*,/private/tmp/*
+  set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  set writebackup
+endif
+
+"setting the path for vim "search so that it looks in these directories while "searching for "files (gf)
+let &path.="src/include,/usr/include/AL"
+
+"---------------------------------UI Config---------------------------------
+
+"show line numbers
+set number   
+
+"show relative line numbers
+set relativenumber              
+
+"show the cursor position all the time    
+set ruler 
+
+"visual autocomplete for command menu (with tab key)
+set wildmenu 
+
+"complete files like a shell
+set wildmode=list:longest,full
+
+"show last command in bottom bar
+set showcmd   
+
+"set the Line wrap (number of cols)
+set textwidth=120
+
+"highlight current line
+set cursorline  
+
+"highlight matching [{()}]
+set showmatch
+
+"show filename in title bar
+set title
+
+"cursor never reaches end of screen. always 5 line difference
+set scrolloff=7
+set sidescrolloff=5
+        
+"Break lines at word (requires Wrap lines)
+set linebreak         
+
+"Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+"Always display status line
+set laststatus=2
+
+"------------------------------------Movements-----------------------------------
+
+"remove mapping of arrow keys in ALL modes
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" move q to force quit
+nnoremap Q q
+
+"move vertically by visual line in normal mode
+nnoremap j gj
+nnoremap k gk
+
+"Remap VIM 0 to first non-blank character
+map 0 g^
+
+nnoremap <silent> $ g$
+
+"Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+
+"Make Y yank to end of line (like D, or C)
+nmap Y y$
+
+"Reselect pasted text. Mnem: 'Get pasted'
+nnoremap gp `[v`]
+
+"Go to position of last edit. Mnem: 'Go to Edit'
+nnoremap ge `.
+
+"---------------------------------Colors Scheme---------------------------------
+
+syntax enable 
+set background=dark
+
+"see instructions on website
+let g:solarized_termcolors= 256 
+let g:solarized_termtrans = 0
+let g:solarized_bold = 0 
+let g:solarized_underline = 0 
+let g:solarized_italic = 0 
+let g:solarized_contrast = "normal" 
+let g:solarized_visibility= "normal" 
+
+set t_Co=256
+
+"choose a color scheme
+colorscheme solarized     
+
+"-----------------------------------Status Line---------------------------------
+
+set statusline=   " clear the statusline for when vimrc is reloaded
+set statusline+=%-2n\                        " buffer number
+set statusline+=%.20F\                       " fullfile name
+set statusline+=%h%m%r%w                     " flags
+set statusline+=%=                           " right align
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+set statusline+=[%{strlen(&ft)?&ft:'none'},   " filetype
+set statusline+=%{strlen(&fenc)?&fenc:&enc},  " encoding
+set statusline+=%{&fileformat}]\             " file format
+set statusline+=[%l,                         "line number
+set statusline+=%c]                          "column number
+set statusline+=[%p%%]\                      "file size
+
+"type 1
+"set statusline=\ %f%m%r%h%w\ %=%({%{&ff}\|%{(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\")}%k\|%Y}%)\ %([%l,%v][%p%%]\ %)
+
+"Tpope's status line simplest
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%y%=%-16(\ %l,%c-%v\ %)%P
+
+"type 3
+"set statusline=   " clear the statusline for when vimrc is reloaded
+"set statusline+=%-2n\                        " buffer number
+"set statusline+=%f\                          " file name
+"set statusline+=%h%m%r%w                     " flags
+"set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+"set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
+"set statusline+=%{&fileformat}]              " file format
+"set statusline+=%=                           " right align
+"set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
+"set statusline+=%b,0x%-8B\                   " current char
+"set statusline+=%-14.(%l,%c%V%)\ %<%P        " offset
+
+"-------------------------------------Searching-----------------------------------
+
+"search as characters are entered
+set incsearch 
+
+"Highlight all search results
+set hlsearch 
+
+"turn off search highlight from above
+nnoremap <leader><space> :nohlsearch<CR>  
+
+"ignore always case-insensitive
+set ignorecase				
+
+"When searching try to be smart about cases 
+set smartcase
+
+"--------------------------------------Indent------------------------------------
+
+"Auto-indent new lines
+set autoindent				
+
+"Use 'C' style program indenting
+set cindent					
+
+"use intelligent indentation for C
+set smartindent	
+
+"Be smart when using tabs
+set smarttab
+
+"configure tabwidth and insert spaces instead of tabs
+"tab width is 4 spaces (default 8 chars)
+set tabstop=4  
+
+"indent also with 4 spaces      
+set shiftwidth=4 
+
+"expand tabs to spaces    
+set expandtab        
+
+"indents based on filetype
+filetype plugin on
+filetype indent on  
+
+"enable folding of functions
+"set foldenable          	
+
+"fold based on indent level
+"set foldmethod=indent   
+
+"-----------------------------------Tabs in Vim----------------------------------
+
+"Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+
+"-----------------------------------Plugin Config---------------------------------
+
+"NerdTree
+"NerdTree toggle
+nnoremap <leader>nt :NERDTreeToggle<cr>
+
+"show hidden files in NERDTree
+let NERDTreeShowHidden=1
+
+"Commentary binding changed
+nmap cm  <Plug>Commentary
+
+" "You Complete Me config
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+let g:ycm_complete_in_comments_and_strings=1
+let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_key_list_select_completion=[]
+" let g:ycm_key_list_previous_completion=[]
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
+"SuperTab config
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+"better key bindings for UltiSnips
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsEditSplit = "vertical"
+let g:UltiSnipsSnippetsDir = "~/.vim/bundle/ultisnips/UltiSnips"
+
+"Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_cpp_auto_refresh_includes = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+"advanced settings check help
+let g:syntastic_cpp_no_default_include_dirs = 1
+let g:syntastic_cpp_remove_include_errors = 1
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_no_include_search = 1
+"let g:syntastic_cpp_checkers = ['gcc', 'clang_check', 'cppcheck']
+let g:syntastic_cpp_checkers = ['gcc']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_cpp_config_file = '.syntastic_cpp_config'
+let g:syntastic_mode_map = {
+            \ "mode": "passive",
+            \ "passive_filetypes": ["cpp", "c"],
+            \ "active_filetypes": []
+            \ }
+let g:table_mode_corner_corner="+"
+let g:table_mode_header_fillchar="="
+
+"DelimitMate config
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+
+source $VIMRUNTIME/macros/matchit.vim 
+autocmd BufEnter *.m    compiler mlint 
+

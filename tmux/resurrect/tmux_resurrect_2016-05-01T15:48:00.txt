@@ -1,0 +1,23 @@
+pane	0	1	:zsh	1	:*	1	:/home/nitin	1	zsh	:
+pane	start	1	:working session	1	:*	1	:/home/nitin/Projects/reconstruction	0	zsh	:
+pane	start	1	:working session	1	:*	2	:/home/nitin/Projects/reconstruction	1	zsh	:
+pane	start	1	:working session	1	:*	3	:/home/nitin/Projects/reconstruction	0	zsh	:
+pane	start	2	:downloads	0	: 	1	:/home/nitin/Downloads	1	zsh	:
+pane	start	3	:scripting	0	: 	1	:/home/nitin/Downloads	0	zsh	:
+pane	start	3	:scripting	0	: 	2	:/home/nitin	0	zsh	:
+pane	start	3	:scripting	0	: 	3	:/home/nitin/bin	0	zsh	:
+pane	start	3	:scripting	0	: 	4	:/home/nitin/bin	1	vim	:vim empty
+pane	start	4	:softwares	0	: 	1	:/home/nitin	0	zsh	:
+pane	start	4	:softwares	0	: 	2	:/home/nitin	1	zsh	:
+pane	start	4	:softwares	0	: 	3	:/home/nitin/Projects	0	zsh	:
+pane	start	4	:softwares	0	: 	4	:/home/nitin	0	bash	:/bin/bash /usr/bin/sublime-text
+pane	start	4	:softwares	0	: 	5	:/home/nitin/Projects	0	MATLAB	:/usr/local/MATLAB/R2015b/bin/glnxa64/MATLAB
+pane	start	5	:vim&tmux	0	:-	1	:/home/nitin	0	zsh	:
+pane	start	5	:vim&tmux	0	:-	2	:/home/nitin	1	zsh	:
+window	0	1	1	:*	ba7d,313x91,0,0,0
+window	start	1	1	:*	bc93,358x103,0,0{179x103,0,0[179x51,0,0,1,179x51,0,52,19],178x103,180,0,3}
+window	start	2	0	: 	9131,358x103,0,0,4
+window	start	3	0	: 	6b16,358x103,0,0{179x103,0,0[179x51,0,0,5,179x51,0,52,17],178x103,180,0[178x51,180,0,14,178x51,180,52,18]}
+window	start	4	0	: 	d016,358x103,0,0{179x103,0,0,6,178x103,180,0[178x26,180,0,7,178x25,180,27,8,178x25,180,53,9,178x24,180,79,10]}
+window	start	5	0	:-	a75a,358x103,0,0{179x103,0,0,12,178x103,180,0,11}
+state	start	start

@@ -1,0 +1,7 @@
+pane	working	1	:working	1	:*	1	:/home/nitin	1	zsh	:
+pane	working	1	:working	1	:*	2	:/home/nitin/Projects/reconstruction	0	vim	:vim display.cpp
+pane	working	2	:scripting	0	:-	1	:/home/nitin/bin	0	zsh	:
+pane	working	2	:scripting	0	:-	2	:/home/nitin	1	zsh	:
+window	working	1	1	:*	21f7,313x91,0,0{156x91,0,0,2,156x91,157,0,0}
+window	working	2	0	:-	a1f7,313x91,0,0{156x91,0,0,1,156x91,157,0,3}
+state	working	

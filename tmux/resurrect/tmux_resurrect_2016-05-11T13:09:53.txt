@@ -1,0 +1,10 @@
+pane	working	1	:working	0	: 	1	:/home/nitin/Projects/reconstruction/test1	0	zsh	:
+pane	working	1	:working	0	: 	2	:/home/nitin/Projects/reconstruction/test1	1	zsh	:
+pane	working	2	:scripting	0	:-	1	:/home/nitin	0	zsh	:
+pane	working	2	:scripting	0	:-	2	:/home/nitin	1	zsh	:
+pane	working	4	:MATLAB	1	:*	1	:/home/nitin/Dropbox/Officelinux/surfaceReconstruction	0	MATLAB	:/usr/local/MATLAB/R2015b/bin/glnxa64/MATLAB
+pane	working	4	:MATLAB	1	:*	2	:/home/nitin	1	zsh	:
+window	working	1	0	: 	1c74,313x91,0,0{156x91,0,0,11,156x91,157,0,0}
+window	working	2	0	:-	a1f7,313x91,0,0{156x91,0,0,1,156x91,157,0,3}
+window	working	4	1	:*	bdec,313x91,0,0{171x91,0,0,19,141x91,172,0,18}
+state	working	
