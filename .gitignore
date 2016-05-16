@@ -1,0 +1,8 @@
+vim/bundle
+vim/compiler
+vim/doc
+vim/ftplugin
+vim/indent
+vim/syntax
+oh-my-zsh/*
+tmux/*
