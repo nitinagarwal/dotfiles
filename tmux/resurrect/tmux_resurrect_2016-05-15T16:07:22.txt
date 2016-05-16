@@ -1,4 +1,0 @@
-pane	0	1	:vim	1	:*	1	:/home/nitin	0	zsh	:
-pane	0	1	:vim	1	:*	2	:/home/nitin/Downloads/MPBenchmarks-20091214/MPBenchmarks	1	vim	:vim GPUTask.cpp
-window	0	1	1	:*	a1f5,313x91,0,0{156x91,0,0,0,156x91,157,0,1}
-state	0	
