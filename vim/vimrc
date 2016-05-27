@@ -73,6 +73,9 @@ Plugin 'vim-scripts/a.vim'
 " copy and pasting fast
 Plugin 'vim-scripts/ReplaceWithRegister'
 
+"vim exchange
+Plugin 'tommcdo/vim-exchange'
+
 "Now we can turn our filetype functionality back on
 filetype plugin indent on 		"REQUIRED
 
@@ -195,8 +198,11 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" move q to force quit
-nnoremap Q q
+" mapping for save and quit in diff modes
+" nnoremap Q q
+noremap <leader>q :q<cr>
+nnoremap <leader>s :w<cr>
+inoremap <leader>s <C-c>:w<cr>
 
 "move vertically by visual line in normal mode
 nnoremap j gj
