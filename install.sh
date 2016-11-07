@@ -32,7 +32,7 @@ done
 # Make ~/trash && ~/bin folder 
 mkdir ~/trash
 echo "Created trash folder"
-git clone http://github.com/nitinagarwal/bin.git
+git clone http://github.com/nitinagarwal/bin.git ~/bin
 echo "Install all personally scripts in ~/bin"
 
 
