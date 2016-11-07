@@ -41,7 +41,7 @@ install_zsh () {
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Clone my oh-my-zsh repository from GitHub only if it isn't already present
     if [[ ! -d $dir/oh-my-zsh/ ]]; then
-        git clone http://github.com/robbyrussell/oh-my-zsh.git
+        git clone http://github.com/robbyrussell/oh-my-zsh.git $dir/oh-my-zsh
     fi
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
@@ -50,8 +50,6 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
 	echo "copying the cobalt2 theme to oh-my-zsh & installing powerline fonts"	
 	cp $dir/cobalt2.zsh-theme $dir/oh-my-zsh/themes
 	$dir/fonts/install.sh
-
-	echo "GO AHEAD AND CHANGE THE FONT SETTINGS IN TERMINAL"
     fi
 else
     # If zsh isn't installed, get the platform of the current machine
@@ -87,6 +85,7 @@ fi
 
 install_zsh
 
+echo "GO AHEAD AND CHANGE THE FONT SETTINGS IN TERMINAL & Restart your computer"
 echo "Check both tmux and vim config files if everything is working properly \n especially the copy and paste"
 echo "Install all the plugins in vim by :PluginInstall"
 
