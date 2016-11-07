@@ -29,6 +29,13 @@ for file in $files; do
     ln -sv $dir/$file ~/.$file
 done
 
+# Make ~/trash && ~/bin folder 
+mkdir ~/trash
+echo "Created trash folder"
+git clone http://github.com/nitinagarwal/bin.git
+echo "Install all personally scripts in ~/bin"
+
+
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
@@ -45,7 +52,6 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
 	$dir/fonts/install.sh
 
 	echo "GO AHEAD AND CHANGE THE FONT SETTINGS IN TERMINAL"
-
     fi
 else
     # If zsh isn't installed, get the platform of the current machine
@@ -53,16 +59,27 @@ else
     # If the platform is Linux, try an apt-get to install zsh and then recurse
     if [[ $platform == 'Linux' ]]; then
         if [[ -f /etc/redhat-release ]]; then
+ 	    echo "This is a Redhad Machine"
             sudo yum install zsh
             install_zsh
         fi
         if [[ -f /etc/debian_version ]]; then
+	    echo "This is a Ubuntu Machine"
             sudo apt-get install zsh
             install_zsh
         fi
     # If the platform is OS X, tell the user to install zsh :)
     elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install zsh, then re-run this script!"
+    
+    	if [[ ! -f /usr/local/bin/brew ]]; then
+            echo "Installing brew"
+            /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        else 
+            brew install zsh
+        fi
+        install_zsh 
+        
+	#echo "Please install zsh, then re-run this script!"
         exit
     fi
 fi
