@@ -116,6 +116,27 @@ alias upgrade="sudo apt-get upgrade"
 #alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
 
 
+########################### Setting my greetings #################################
+
+HOUR=`date "+%H"`
+
+if [ $HOUR -gt 3 ] && [ $HOUR -le 6 ] ; then
+    echo "Welcome back Zeus, \n Finish your work and sleep quickly \n Good Night"
+
+elif [ $HOUR -gt 6 ] && [ $HOUR -le 12 ]; then
+    echo "Good Morning Zeus, Be Productive Today"
+
+elif [ $HOUR -gt 12 ] && [ $HOUR -le 18 ]; then
+      echo "Welcome Back Zeus, Dont Be Lazy, Keep Working"
+
+elif [ $HOUR -gt 18 ] && [ $HOUR -le 24 ]; then
+      echo " Good Evening Zeus, Howz work coming along \n Keep up the good Work"
+
+else 
+    echo "Keep up the good work but remember to sleep early"
+fi    
+    
+####################################################################################
 
 
 
