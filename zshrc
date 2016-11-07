@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/dotfiles/oh-my-zsh
 
 # want your terminal to support 256 color schemes? I do ...
 export TERM="xterm-256color"
@@ -81,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-. ~/z.sh
+#. ~/z.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -91,11 +91,11 @@ source $ZSH/oh-my-zsh.sh
 
 export TRASH_CAN=$HOME/trash
 
-export CUDA_HOME=/usr/local/cuda-7.5 
-export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
+#export CUDA_HOME=/usr/local/cuda-7.5 
+#export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
  
-PATH=${CUDA_HOME}/bin:${PATH} 
-export PATH
+#PATH=${CUDA_HOME}/bin:${PATH} 
+#export PATH
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -109,10 +109,11 @@ export PATH
 alias git='nocorrect git'
 alias l="ls -lthF"
 alias o="gnome-open"
-alias matlab="matlab -nodesktop"
+alias cl="clear"
+#alias matlab="matlab -nodesktop"
 alias update="sudo apt-get update"
 alias upgrade="sudo apt-get upgrade"
-alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
+#alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
 
 
 
