@@ -110,11 +110,13 @@ alias git='nocorrect git'
 alias l="ls -althF"
 alias o="gnome-open"
 alias cl="clear"
-#alias matlab="matlab -nodesktop"
 alias update="sudo apt-get update"
 alias upgrade="sudo apt-get upgrade"
-#alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
+alias subl="/opt/sublime_text/sublime_text"
+alias install="sudo apt-get install"
 
+#alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
+#alias matlab="matlab -nodesktop"
 
 ########################### Setting my greetings #################################
 
