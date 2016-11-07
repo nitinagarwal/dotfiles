@@ -86,3 +86,7 @@ fi
 }
 
 install_zsh
+
+echo "Check both tmux and vim config files if everything is working properly \n especially the copy and paste"
+echo "Install all the plugins in vim by :PluginInstall"
+
