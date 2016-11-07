@@ -39,6 +39,11 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Set the default shell to zsh if it isn't currently set to zsh
     if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
         chsh -s $(which zsh)
+	
+	echo "copying the cobalt2 theme to oh-my-zsh & installing powerline fonts"	
+	cp $dir/cobalt2.zsh-theme $dir/oh-my-zsh/themes
+	$dir/fonts/install.sh
+
     fi
 else
     # If zsh isn't installed, get the platform of the current machine

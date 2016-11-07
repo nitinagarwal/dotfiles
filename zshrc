@@ -107,7 +107,7 @@ export TRASH_CAN=$HOME/trash
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias git='nocorrect git'
-alias l="ls -lthF"
+alias l="ls -althF"
 alias o="gnome-open"
 alias cl="clear"
 #alias matlab="matlab -nodesktop"
