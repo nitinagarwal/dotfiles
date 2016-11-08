@@ -1,10 +1,11 @@
 " Vim config file
-" Nitin Agarwal
-" last updated 25th April 16
+
+" Copyright (c) Nitin Agarwal 
+" Created:            Sun 31 Jul 2016 10:03:01 PM CDT
+" Last Modified:      Wed 10 Aug 2016 06:59:03 PM CDT
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
-
 
 
 "----------------------------Plugins Management---------------------
@@ -70,19 +71,25 @@ Plugin 'kana/vim-textobj-user'
 " Switching between .h & .cpp file faster
 Plugin 'vim-scripts/a.vim'
 
+" Automatically updating timestamps
+Plugin 'vim-scripts/timestamp.vim'
+
 " copy and pasting fast
 Plugin 'vim-scripts/ReplaceWithRegister'
 
-"vim exchange
+"vim text exchange
 Plugin 'tommcdo/vim-exchange'
 
 "Now we can turn our filetype functionality back on
 filetype plugin indent on 		"REQUIRED
 
+
+
 "-----------------------------General-------------------------------------
 
 "Integrates copy & paste with system clipboard
 "works only after installing vim-gnome
+
 set clipboard=unnamedplus
 
 "In many terminal emulators the mouse works just fine, thus enable it.
@@ -109,7 +116,7 @@ nnoremap <leader>s :mksession<CR>
 :nnoremap <leader>ez :vsplit ~/.zshrc<cr>
 
 "keeps the formating same when you are pasting from different window in vim
-" set paste
+set paste
 
 "removes the swap files
 set noswapfile
@@ -242,7 +249,7 @@ let g:solarized_visibility= "normal"
 set t_Co=256
 
 "choose a color scheme
-colorscheme solarized     
+colorscheme solarized    
 
 "-----------------------------------Status Line---------------------------------
 
@@ -327,7 +334,7 @@ filetype indent on
 "set foldenable          	
 
 "fold based on indent level
-"set foldmethod=indent   
+"set foldmethod=indent  
 
 "-----------------------------------Tabs in Vim----------------------------------
 
