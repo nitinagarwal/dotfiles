@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Mon 07 Nov 2016 05:08:47 PM PST
+" Last Modified:      Mon 07 Nov 2016 06:51:33 PM PST
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -44,7 +44,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tmux-plugins/vim-tmux'
 
 "Syntax completion for C family languages
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 
 "Auto completion dark delimiters
 Plugin 'Raimondi/delimitMate'
