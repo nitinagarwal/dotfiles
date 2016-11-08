@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Wed 10 Aug 2016 06:59:03 PM CDT
+" Last Modified:      Mon 07 Nov 2016 05:08:47 PM PST
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -15,12 +15,12 @@ set nocompatible
 
 "vundle requirements
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()				"REQUIRED
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()				"REQUIRED
 
 "All plugins go here btw two REQUIRED (specify plugins - 'user/repository')
 
-Plugin 'gmarik/vundle'			"REQUIRED
+Plugin 'VundleVim/Vundle.vim'			"REQUIRED
 
 "Syntastic
 Plugin 'scrooloose/syntastic.git'
@@ -44,9 +44,9 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tmux-plugins/vim-tmux'
 
 "Syntax completion for C family languages
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
-"Auto completion of delimiters
+"Auto completion dark delimiters
 Plugin 'Raimondi/delimitMate'
 
 "Allows to use 'tabs' for completion
@@ -80,9 +80,10 @@ Plugin 'vim-scripts/ReplaceWithRegister'
 "vim text exchange
 Plugin 'tommcdo/vim-exchange'
 
-"Now we can turn our filetype functionality back on
+" All of your Plugins must be added before the following line
+" Now we can turn our filetype functionality back on
+call vundle#end()               "REQUIRED
 filetype plugin indent on 		"REQUIRED
-
 
 
 "-----------------------------General-------------------------------------
