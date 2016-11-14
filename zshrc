@@ -116,8 +116,8 @@ alias upgrade="sudo apt-get upgrade"
 alias subl="/opt/sublime_text/sublime_text"
 alias install="sudo apt-get install"
 
-#alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
-#alias matlab="matlab -nodesktop"
+alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
+alias matlab="/usr/local/MATLAB/R2015b/bin/matlab -nodesktop"
 
 ########################### Setting my greetings #################################
 
