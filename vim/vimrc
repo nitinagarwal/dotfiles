@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Tue 15 Nov 2016 02:21:26 AM PST
+" Last Modified:      Wed 16 Nov 2016 10:18:05 AM PST
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -117,7 +117,7 @@ nnoremap <leader>s :mksession<CR>
 :nnoremap <leader>ez :vsplit ~/.zshrc<cr>
 
 "keeps the formating same when you are pasting from different window in vim
-set paste
+" set paste (conflicting with UltiSnips + YCM + supertab)
 
 "removes the swap files
 set noswapfile
@@ -367,13 +367,13 @@ nmap cm  <Plug>Commentary
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 let g:ycm_complete_in_comments_and_strings=1
 let g:ycm_autoclose_preview_window_after_completion = 1
-" let g:ycm_key_list_select_completion=[]
-" let g:ycm_key_list_previous_completion=[]
+let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<c-b>', '<Up>']
 
 "SuperTab config
-let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabDefaultCompletionType = '<c-n>'
 
-"better key bindings for UltiSnips
+"better key bindings for UltiSnips (this comes only in picture during snippets not otherwise )
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
@@ -414,4 +414,3 @@ let delimitMate_expand_space = 1
 
 source $VIMRUNTIME/macros/matchit.vim 
 autocmd BufEnter *.m    compiler mlint 
-
