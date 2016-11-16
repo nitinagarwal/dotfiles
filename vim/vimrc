@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Tue 15 Nov 2016 12:41:15 AM PST
+" Last Modified:      Tue 15 Nov 2016 02:21:26 AM PST
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -15,74 +15,74 @@ set nocompatible
 
 "vundle requirements
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()				"REQUIRED
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()				"REQUIRED
 
-"All plugins go here btw two REQUIRED (specify plugins - 'user/repository')
+ "All plugins go here btw two REQUIRED (specify plugins - 'user/repository')
 
-Plugin 'VundleVim/Vundle.vim'			"REQUIRED
+ Plugin 'VundleVim/Vundle.vim'			"REQUIRED
 
-"Syntastic
-Plugin 'scrooloose/syntastic.git'
+ "Syntastic
+ Plugin 'scrooloose/syntastic.git'
 
-"Nerd Tree
-Plugin 'scrooloose/nerdtree'
+ "Nerd Tree
+ Plugin 'scrooloose/nerdtree'
 
-"Commentary-Motion aware
-Plugin 'tpope/vim-commentary'
+ "Commentary-Motion aware
+ Plugin 'tpope/vim-commentary'
 
-"Solarized Color Scheme
-Plugin 'altercation/vim-colors-solarized'
+ "Solarized Color Scheme
+ Plugin 'altercation/vim-colors-solarized'
 
-"Surround-Add,Change,Remove enclosing remakrs
-Plugin 'tpope/vim-surround'
+ "Surround-Add,Change,Remove enclosing remakrs
+ Plugin 'tpope/vim-surround'
 
-"Enable repeating of supporting commands from plugins
-Plugin 'tpope/vim-repeat'
+ "Enable repeating of supporting commands from plugins
+ Plugin 'tpope/vim-repeat'
 
-"Enables syntax highlighting for .tmux.config
-Plugin 'tmux-plugins/vim-tmux'
+ "Enables syntax highlighting for .tmux.config
+ Plugin 'tmux-plugins/vim-tmux'
 
-"Syntax completion for C family languages
+ "Syntax completion for C family languages
 Plugin 'Valloric/YouCompleteMe'
 
-"Auto completion dark delimiters
-Plugin 'Raimondi/delimitMate'
+ "Auto completion dark delimiters
+ Plugin 'Raimondi/delimitMate'
 
-"Allows to use 'tabs' for completion
-Plugin 'ervandew/supertab'
+ "Allows to use 'tabs' for completion
+ Plugin 'ervandew/supertab'
 
-"Snippets for different languages
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'honza/vim-snippets'
-" Plugin 'garbas/vim-snipmate' 
-Bundle 'SirVer/ultisnips'
+ "Snippets for different languages
+ Plugin 'MarcWeber/vim-addon-mw-utils'
+ Plugin 'tomtom/tlib_vim'
+ Plugin 'honza/vim-snippets'
+ " Plugin 'garbas/vim-snipmate' 
+ Bundle 'SirVer/ultisnips'
 
-"Seamless movement between vim and tmux splits
-Plugin 'christoomey/vim-tmux-navigator'
+ "Seamless movement between vim and tmux splits
+ Plugin 'christoomey/vim-tmux-navigator'
 
-"Some text-objects (nouns) on which various other verbs can act
-Plugin 'kana/vim-textobj-entire' 
-Plugin 'kana/vim-textobj-indent'  
-Plugin 'kana/vim-textobj-line'     
-Plugin 'kana/vim-textobj-user'      
+ "Some text-objects (nouns) on which various other verbs can act
+ Plugin 'kana/vim-textobj-entire' 
+ Plugin 'kana/vim-textobj-indent'  
+ Plugin 'kana/vim-textobj-line'     
+ Plugin 'kana/vim-textobj-user'      
 
-" Switching between .h & .cpp file faster
-Plugin 'vim-scripts/a.vim'
+ " Switching between .h & .cpp file faster
+ Plugin 'vim-scripts/a.vim'
 
-" Automatically updating timestamps
-Plugin 'vim-scripts/timestamp.vim'
+ " Automatically updating timestamps
+ Plugin 'vim-scripts/timestamp.vim'
 
-" copy and pasting fast
-Plugin 'vim-scripts/ReplaceWithRegister'
+ " copy and pasting fast
+ Plugin 'vim-scripts/ReplaceWithRegister'
 
-"vim text exchange
-Plugin 'tommcdo/vim-exchange'
+ "vim text exchange
+ Plugin 'tommcdo/vim-exchange'
 
-" All of your Plugins must be added before the following line
-" Now we can turn our filetype functionality back on
-call vundle#end()               "REQUIRED
+ " All of your Plugins must be added before the following line
+ " Now we can turn our filetype functionality back on
+ call vundle#end()               "REQUIRED
 filetype plugin indent on 		"REQUIRED
 
 
@@ -369,10 +369,6 @@ let g:ycm_complete_in_comments_and_strings=1
 let g:ycm_autoclose_preview_window_after_completion = 1
 " let g:ycm_key_list_select_completion=[]
 " let g:ycm_key_list_previous_completion=[]
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 
 "SuperTab config
 let g:SuperTabDefaultCompletionType = '<C-n>'

@@ -1,0 +1,21 @@
+
+
+ON MAC SYSTEMS:
+1. On a new mac. Install home-brew. Then using brew install git, python, vim (newer version)\
+2. install tmux via brew. install TPM (tmux plugin manager) copy config files.\
+
+track all the bin files all the dot files.\
+
+cpp autocomplete - > ycm_extra_conf.py\
+utilsnips eg for matlab\
+
+
+ON UBUNTU SYSTEMS:\
+
+run the install.sh script.\
+make ~/.tmux folder and install tmux (version > 1.9) and install tmux plugin manager + install all plugins\
+install vim-gnome (to get all clipboard) features.\
+Install all vim plugins. \
+Install YouCompleteMe with the ycm_extra_conf_2.py\
+Install xsel, xclip for clipboard copy and paste\
+Quickly have a look at all config files (zshrc, vimrc, tmux)\
