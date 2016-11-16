@@ -1,0 +1,224 @@
+snippet cpyr "Copyright Information" b
+Copyright (c) Nitin Agarwal 
+Created: Sun 31 Jul 2016 09:53:03 PM CDT
+Last Modified: Sun 31 Jul 2016 09:53:03 PM CDT
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in
+      the documentation and/or other materials provided with the distribution
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+endsnippet
+
+snippet if "If Statement" b
+if ${1:condition}
+  ${2:body}
+end
+endsnippet
+
+snippet ife "IfElse Statement" b
+if ${1:condition}
+   ${2}
+else
+	${3}
+end
+endsnippet
+
+snippet ifeif "IfElseIf Statemnet" b
+if ${1:condition}
+${2:body}
+elseif ${3:condition}
+${4:body}
+else
+${5:body}
+end
+endsnippet
+
+snippet whi "While Statement" b
+while ${1:condition}
+	${2:body}
+end 
+endsnippet
+
+snippet swi " Switch Statemnet" b
+switch ${1:switch_expression}
+	case ${2:case_expression}
+		$0
+	otherwise
+end
+endsnippet
+
+snippet war "Warning Statemnet" b
+warning('${1:Description}');
+endsnippet
+
+snippet try "Try Catch Statement" b
+try 
+	${1}
+catch 
+	${0}
+endsnippet
+
+snippet for "For Statement" b
+for ${1:i} = ${2:from}:${3:to}
+	$0
+end
+endsnippet
+
+snippet fun "Function Statement" b
+function [ ${1:output_args} ] = ${2:functionName}( ${3:input_args} )
+end
+endsnippet
+
+snippet error "Error Statement" b
+error('${1:Description}');
+endsnippet
+
+snippet elif "ElseIf Statement" b
+elseif ${1:condition}
+	${0}
+endsnippet
+
+# else
+snippet el 
+else
+	${1:body}
+endsnippet
+
+snippet case "Case Statement" b
+case ${2:'${3:string}'}
+	${0}
+endsnippet
+
+# switch … case … end
+snippet switch
+switch ${1:var}
+	case ${2:'${3:string}'}
+	${0}
+end
+endsnippet
+
+# set
+snippet set
+set(${1:get(${2:gca},'${3:PropertyName}')},'${4:PropertyName}',${5:PropertyValue});
+endsnippet
+
+# title
+snippet tit
+title('${1}');
+endsnippet
+
+# # xlabel
+# snippet xla
+#   xlabel('${1}');
+# endsnippet
+
+# # xtick
+# snippet xti
+#   set(gca,'XTick',[${2}]);
+# endsnippet
+
+
+# # ylabel
+# snippet yla
+#   ylabel('${1}');
+# endsnippet
+
+# # ytick
+# snippet yti
+#   set(gca,'YTick',[${2}]);
+# endsnippet
+
+# # zlabel
+# snippet zla
+#   zlabel('${1}');
+# endsnippet
+
+# # ^
+# snippet ^
+#   ^(${1}) ${2}
+# endsnippet
+
+# # clear
+# snippet cle
+#   clear('${1:all}'${2});
+# endsnippet
+
+# # disp sprintf
+# snippet dsp
+#   disp(sprintf('${1:%s}\\n'${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}${2}${1/([^%]|%%)*(%.)?.*/(?2:\);)/});
+# endsnippet
+
+# # disp
+# snippet disp
+#   disp('${1:Text}');
+# endsnippet
+
+# # dlmwrite
+# snippet dlmwrite
+#   dlmwrite('${1:filename}.dat', [${2:variables}], ${3:'${4:delimiter}', '${5:\t}'});
+#   ${0}
+# endsnippet
+
+# # exp
+# snippet e
+#   exp(${1}) ${2}
+# endsnippet
+
+# # fprintf
+# snippet fpr
+#   fprintf(${1:fid}, '${2:%s}\\n'${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}${3}${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+# endsnippet
+
+# # get
+# snippet get
+#   get(${1:gca},'${2:PropertyName}');
+# endsnippet
+
+# # griddata
+# snippet griddata
+#   griddata(${1:xx}, ${2:yy}, ${3:zz}, ${4:xi}, ${5:yi}); 
+# endsnippet
+
+
+# # line
+# snippet line
+#   line(${1:xvector},${2:yvector}${3:,'Color','${4:b}','LineWidth',${5:1},'LineStyle','${6:-}'})
+# endsnippet
+
+# # sprintf
+# snippet spr
+#   sprintf('${1:%s}\\n'${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}${2}${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
+# endsnippet
+
+# # fontsize
+# snippet fontsi
+#   set(gca, 'fontsize', ${1:14});
+# endsnippet
+
+# # fontweight
+# snippet fontwei
+#   set(gca, 'fontweight', '${1:bold}');
+# endsnippet
+
+
+
+
