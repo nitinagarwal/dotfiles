@@ -48,7 +48,7 @@ if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
         chsh -s $(which zsh)
 	
 	echo "copying the cobalt2 theme to oh-my-zsh & installing powerline fonts"	
-	cp $dir/cobalt2.zsh-theme $dir/oh-my-zsh/themes
+	cp $dir/cobalt2/cobalt2.zsh-theme $dir/oh-my-zsh/themes
 	$dir/fonts/install.sh
     fi
 else
