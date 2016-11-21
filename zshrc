@@ -116,6 +116,7 @@ alias upgrade="sudo apt-get upgrade"
 alias subl="/opt/sublime_text/sublime_text"
 alias install="sudo apt-get install"
 alias install_pkg="sudo dpkg -i"
+alias open="xdg-open"  # Only for ubuntuge
 
 alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
 alias matlab="/usr/local/MATLAB/R2015b/bin/matlab -nodesktop"
