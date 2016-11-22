@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Wed 16 Nov 2016 10:18:05 AM PST
+" Last Modified:      Sun 20 Nov 2016 05:23:56 PM PST
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -333,10 +333,17 @@ filetype plugin on
 filetype indent on  
 
 "enable folding of functions
-"set foldenable          	
+" set foldenable          	
 
 "fold based on indent level
-"set foldmethod=indent  
+set foldmethod=indent  
+set foldlevel=2
+set foldclose=all
+
+" zo - opens folds
+" zc - closes fold
+" zm - increases auto fold depth
+" zr - reduces auto fold depth
 
 "-----------------------------------Tabs in Vim----------------------------------
 
