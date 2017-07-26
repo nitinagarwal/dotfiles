@@ -97,6 +97,8 @@ export TRASH_CAN=$HOME/trash
 #PATH=${CUDA_HOME}/bin:${PATH} 
 #export PATH
 
+export PATH=/opt/Qt/5.9.1/gcc_64/bin:$PATH
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
