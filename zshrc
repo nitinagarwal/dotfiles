@@ -91,11 +91,11 @@ source $ZSH/oh-my-zsh.sh
 
 export TRASH_CAN=$HOME/trash
 
-#export CUDA_HOME=/usr/local/cuda-7.5 
-#export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
+export CUDA_HOME=/usr/local/cuda-8.0 
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH 
  
-#PATH=${CUDA_HOME}/bin:${PATH} 
-#export PATH
+# PATH=${CUDA_HOME}/bin:${PATH} 
+export PATH=${CUDA_HOME}/bin:${PATH} 
 
 export PATH=/opt/Qt/5.9.1/gcc_64/bin:$PATH
 
