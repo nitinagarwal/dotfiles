@@ -66,6 +66,10 @@ plugins=(zsh-syntax-highlighting vagrant heroku brew gem gitfast)
 
 # User configuration
 
+# NTFS partion when mounted have green color. this fixes it
+eval "`dircolors ~/.mydircolors`"
+
+
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
