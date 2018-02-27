@@ -69,7 +69,6 @@ plugins=(zsh-syntax-highlighting vagrant heroku brew gem gitfast)
 # NTFS partion when mounted have green color. this fixes it
 eval "`dircolors ~/.mydircolors`"
 
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -101,7 +100,7 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 # PATH=${CUDA_HOME}/bin:${PATH} 
 export PATH=${CUDA_HOME}/bin:${PATH} 
 
-export PATH=/opt/Qt/5.9.1/gcc_64/bin:$PATH
+export PATH=/opt/Qt5.9.1/5.9.1/gcc_64/bin:$PATH
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -124,8 +123,8 @@ alias install="sudo apt-get install"
 alias install_pkg="sudo dpkg -i"
 alias open="xdg-open"  # Only for ubuntuge
 
-alias matlabgui="/usr/local/MATLAB/R2015b/bin/matlab"
-alias matlab="/usr/local/MATLAB/R2015b/bin/matlab -nodesktop"
+alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
+alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
 
 ########################### Setting my greetings #################################
 

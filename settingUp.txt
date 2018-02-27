@@ -16,7 +16,7 @@ run the install.sh script.\
 make ~/.tmux folder and install tmux (version > 1.9) and install tmux plugin manager + install all plugins\
 install vim-gnome (to get all clipboard) features.\
 Install all vim plugins. \
-Install YouCompleteMe with the ycm_extra_conf_2.py\
+Install YouCompleteMe with the ycm_extra_conf.py\
 Put the customs snips in utlisnip/UltiSnips
 Install xsel, xclip for clipboard copy and paste\
 Quickly have a look at all config files (zshrc, vimrc, tmux)\

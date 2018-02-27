@@ -7,7 +7,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc tmux tmux.conf vim zshrc"    # list of files/folders to symlink in homedir
+files="bashrc tmux tmux.conf vim zshrc mydircolors"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -85,7 +85,7 @@ fi
 
 install_zsh
 
-echo "GO AHEAD AND CHANGE THE FONT SETTINGS IN TERMINAL & Restart your computer"
+echo "GO AHEAD AND CHANGE THE FONT SETTINGS IN TERMINAL & Restart your computer. Change the font to Inconsolata for Powerline Medium"
 echo "Check both tmux and vim config files if everything is working properly \n especially the copy and paste"
 echo "Install all the plugins in vim by :PluginInstall"
 
