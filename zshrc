@@ -94,14 +94,17 @@ source $ZSH/oh-my-zsh.sh
 
 export TRASH_CAN=$HOME/trash
 
-export CUDA_HOME=/usr/local/cuda-8.0 
-export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH 
+export CUDA_HOME=/usr/local/cuda 
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64:$LD_LIBRARY_PATH 
  
 # PATH=${CUDA_HOME}/bin:${PATH} 
-export PATH=${CUDA_HOME}/bin:${PATH} 
+export PATH=${CUDA_HOME}/bin:$PATH 
 
 export PATH=/opt/Qt5.9.1/5.9.1/gcc_64/bin:$PATH
 
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
+export PATH=$PATH:${JAVA_HOME}/bin
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
