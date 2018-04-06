@@ -157,3 +157,6 @@ fi
 
 
 
+
+
+. /home/minions/torch/install/bin/torch-activate

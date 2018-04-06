@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Mon 02 Apr 2018 06:56:27 PM PDT
+" Last Modified:      Fri 06 Apr 2018 12:39:37 AM PDT
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -48,6 +48,10 @@ Plugin 'Valloric/YouCompleteMe'
 
 " for auto-indentation while write python code
 Plugin 'vim-scripts/indentpython.vim'
+
+" fuzzy searcher for file search
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 
  "Auto completion dark delimiters
  Plugin 'Raimondi/delimitMate'
@@ -373,7 +377,10 @@ let NERDTreeShowHidden=1
 "Commentary binding changed
 nmap cm  <Plug>Commentary
 
-" "You Complete Me config
+" CtrlP config
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+
+"You Complete Me config
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 let g:ycm_complete_in_comments_and_strings=1
 let g:ycm_autoclose_preview_window_after_completion = 1
