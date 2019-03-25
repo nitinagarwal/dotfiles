@@ -126,8 +126,8 @@ alias install="sudo apt-get install"
 alias install_pkg="sudo dpkg -i"
 alias open="xdg-open"  # Only for ubuntuge
 
-alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
-alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
+alias matlabgui="/usr/local/MATLAB/R2018b/bin/matlab"
+alias matlab="/usr/local/MATLAB/R2018b/bin/matlab -nodesktop"
 
 ########################### Setting my greetings #################################
 
@@ -157,6 +157,9 @@ fi
 
 
 
+
+
+. /home/minions/torch/install/bin/torch-activate
 
 
 . /home/minions/torch/install/bin/torch-activate
