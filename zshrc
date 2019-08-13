@@ -70,6 +70,11 @@ plugins=(zsh-syntax-highlighting vagrant heroku brew gem gitfast)
 eval "`dircolors ~/.mydircolors`"
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# For Cisco UCI VPN
+export PATH=$HOME/VPN:$PATH
+alias connect_vpn="/home/minions/VPN/ucivpnup"
+alias disconnect_vpn="/home/minions/VPN/ucivpndown"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -100,7 +105,8 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64:$LD_LI
 # PATH=${CUDA_HOME}/bin:${PATH} 
 export PATH=${CUDA_HOME}/bin:$PATH 
 
-export PATH=/opt/Qt5.9.1/5.9.1/gcc_64/bin:$PATH
+# export PATH=/opt/Qt5.9.1/5.9.1/gcc_64/bin:$PATH
+export PATH=/opt/Qt5.11.1/5.11.1/gcc_64/bin:$PATH
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
@@ -126,8 +132,8 @@ alias install="sudo apt-get install"
 alias install_pkg="sudo dpkg -i"
 alias open="xdg-open"  # Only for ubuntuge
 
-alias matlabgui="/usr/local/MATLAB/R2018b/bin/matlab"
-alias matlab="/usr/local/MATLAB/R2018b/bin/matlab -nodesktop"
+alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
+alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
 
 ########################### Setting my greetings #################################
 
