@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Tue 13 Aug 2019 11:01:00 AM PDT
+" Last Modified:      Tue 13 Aug 2019 11:24:21 AM PDT
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -90,6 +90,7 @@ Plugin 'tacahiroy/ctrlp-funky'
 
  "tag support for html, xml files"
  Plugin 'tpope/vim-ragtag'
+ Plugin 'alvan/vim-closetag'
 
  " All of your Plugins must be added before the following line
  " Now we can turn our filetype functionality back on
@@ -435,6 +436,12 @@ let g:table_mode_header_fillchar="="
 "DelimitMate config
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
+
+"closetag settings"
+let g:closetag_filenames = '*.html, *.xml, *.xhtml'
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
+
 
 source $VIMRUNTIME/macros/matchit.vim 
 autocmd BufEnter *.m    compiler mlint 
