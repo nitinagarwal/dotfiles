@@ -111,6 +111,12 @@ export PATH=/opt/Qt5.11.1/5.11.1/gcc_64/bin:$PATH
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 export PATH=$PATH:${JAVA_HOME}/bin
+
+# just a fix. old bash version do not look there
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
