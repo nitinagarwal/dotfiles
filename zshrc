@@ -140,6 +140,7 @@ alias open="xdg-open"  # Only for ubuntuge
 
 alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
 alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
+alias conda="$HOME/anaconda3/bin/conda"
 
 ########################### Setting my greetings #################################
 
