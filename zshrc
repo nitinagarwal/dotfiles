@@ -73,8 +73,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # For Cisco UCI VPN
 export PATH=$HOME/VPN:$PATH
-alias connect_vpn="/home/minions/VPN/ucivpnup"
-alias disconnect_vpn="/home/minions/VPN/ucivpndown"
+# alias connect_vpn="/home/minions/VPN/ucivpnup"
+# alias disconnect_vpn="/home/minions/VPN/ucivpndown"
+alias vpn="/opt/cisco/anyconnect/bin/vpn"
+alias vpnui="/opt/cisco/anyconnect/bin/vpnui"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -112,6 +114,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 export PATH=$PATH:${JAVA_HOME}/bin
 
+export PYTHONPATH=/home/minions/caffe/python:$PYTHONPATH
+
 # # just a fix. old bash version do not look there
 # if [ -d "$HOME/.local/bin" ] ; then
 #     PATH="$HOME/.local/bin:$PATH"
@@ -140,7 +144,6 @@ alias open="xdg-open"  # Only for ubuntuge
 
 alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
 alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
-alias conda="$HOME/anaconda3/bin/conda"
 
 ########################### Setting my greetings #################################
 
@@ -176,4 +179,20 @@ fi
 
 
 . /home/minions/torch/install/bin/torch-activate
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/minions/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/minions/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/minions/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/minions/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
