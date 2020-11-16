@@ -5,4 +5,4 @@ vim/ftplugin
 vim/indent
 vim/syntax
 tmux/*
-oh-my-zsh/*
+oh-my-zsh

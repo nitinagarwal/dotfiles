@@ -2,7 +2,7 @@
 
 " Copyright (c) Nitin Agarwal 
 " Created:            Sun 31 Jul 2016 10:03:01 PM CDT
-" Last Modified:      Tue 13 Aug 2019 11:24:21 AM PDT
+" Last Modified:      Mon 16 Nov 2020 02:03:32 PM EST
 
 ":echo $MYVIMRC this is the location of my vimrc from vim
 ":set name-of-expression? for looking at curret state
@@ -394,6 +394,8 @@ let g:ycm_complete_in_comments_and_strings=1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<c-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<c-b>', '<Up>']
+" make sure same python version used to complile vim
+let g:ycm_path_to_python_interpreter = '/usr/bin/python3.7'
 
 "SuperTab config
 let g:SuperTabDefaultCompletionType = '<c-n>'

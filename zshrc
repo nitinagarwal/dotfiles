@@ -102,19 +102,18 @@ source $ZSH/oh-my-zsh.sh
 export TRASH_CAN=$HOME/trash
 
 export CUDA_HOME=/usr/local/cuda 
-export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64:$LD_LIBRARY_PATH 
- 
-# PATH=${CUDA_HOME}/bin:${PATH} 
-export PATH=${CUDA_HOME}/bin:$PATH 
+# export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${CUDA_HOME}/extras/CUPTI/lib64:$LD_LIBRARY_PATH 
+export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 # export PATH=/opt/Qt5.9.1/5.9.1/gcc_64/bin:$PATH
-export PATH=/opt/Qt5.11.1/5.11.1/gcc_64/bin:$PATH
+# export PATH=/opt/Qt5.11.1/5.11.1/gcc_64/bin:$PATH
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 export PATH=$PATH:${JAVA_HOME}/bin
 
-export PYTHONPATH=/home/minions/caffe/python:$PYTHONPATH
+# export PYTHONPATH=/home/minions/caffe/python:$PYTHONPATH
 
 # # just a fix. old bash version do not look there
 # if [ -d "$HOME/.local/bin" ] ; then
@@ -135,15 +134,16 @@ alias tmux='nocorrect tmux'
 alias l="ls -althF"
 alias o="gnome-open"
 alias cl="clear"
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
 alias subl="/opt/sublime_text/sublime_text"
-alias install="sudo apt-get install"
+alias install="sudo apt install"
 alias install_pkg="sudo dpkg -i"
 alias open="xdg-open"  # Only for ubuntuge
+# alias conda="$HOME/anaconda3/bin/conda"
 
-alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
-alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
+# alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
+# alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
 
 ########################### Setting my greetings #################################
 
@@ -170,27 +170,16 @@ fi
 
 
 
-
-
-
-
-
-. /home/minions/torch/install/bin/torch-activate
-
-
-. /home/minions/torch/install/bin/torch-activate
-
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/minions/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/nitin/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/minions/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/minions/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/nitin/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nitin/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/minions/anaconda3/bin:$PATH"
+        export PATH="/home/nitin/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
