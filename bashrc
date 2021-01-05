@@ -120,3 +120,5 @@ fi
 
 
 
+export PM_PACKAGES_ROOT=$HOME/packman-repo
+

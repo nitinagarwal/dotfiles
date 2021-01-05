@@ -81,6 +81,9 @@ alias vpnui="/opt/cisco/anyconnect/bin/vpnui"
 
 source $ZSH/oh-my-zsh.sh
 
+# for mitsuba 2
+source $HOME/mitsuba2/setpath.sh
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -106,8 +109,7 @@ export CUDA_HOME=/usr/local/cuda
 export PATH=/usr/local/cuda-10.1/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-10.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
-# export PATH=/opt/Qt5.9.1/5.9.1/gcc_64/bin:$PATH
-# export PATH=/opt/Qt5.11.1/5.11.1/gcc_64/bin:$PATH
+export PATH=/opt/Qt5.12.9/5.12.9/gcc_64/bin:$PATH
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
@@ -129,7 +131,11 @@ export PATH=$PATH:${JAVA_HOME}/bin
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#git alias
 alias git='nocorrect git'
+alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen%cr %C(cyan)[%aN]%Creset'"
+alias gitll="git log --graph --all --pretty=format:'%Cred%h%Creset - %C(yellow)%d%Creset %s %Cgreen%cr %C(cyan)[%aN]%Creset'"
+
 alias tmux='nocorrect tmux'
 alias l="ls -althF"
 alias o="gnome-open"
@@ -141,6 +147,7 @@ alias install="sudo apt install"
 alias install_pkg="sudo dpkg -i"
 alias open="xdg-open"  # Only for ubuntuge
 # alias conda="$HOME/anaconda3/bin/conda"
+alias python="python3.7"
 
 # alias matlabgui="/usr/local/MATLAB/R2017b/bin/matlab"
 # alias matlab="/usr/local/MATLAB/R2017b/bin/matlab -nodesktop"
